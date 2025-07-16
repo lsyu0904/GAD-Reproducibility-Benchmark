@@ -127,12 +127,18 @@ python main.py --use_cfg --seeds 0 --dataset reddit
 *   **ConsisGAD**: [https://github.com/Xtra-Computing/ConsisGAD](https://github.com/Xtra-Computing/ConsisGAD)
 *   **ADA-GAD**: [https://github.com/jweihe/ADA-GAD](https://github.com/jweihe/ADA-GAD)
 
-如果您在您的研究中使用了本仓库整合的基准测试成果，请考虑引用本仓库：
-@misc{your_name_2025_gad_benchmark,
-  author = {Your Name Here},
-  title  = {A Reproducibility Benchmark for Graph Anomaly Detection},
-  year   = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{[https://github.com/your-username/GAD-Reproducibility-Benchmark](https://github.com/your-username/GAD-Reproducibility-Benchmark)}},
+欢迎通过 Issue 或 Pull Request 对本项目进行提问和贡献！
+
+## 7. 如何引用
+
+如果您在您的研究中使用了本仓库整合的基准测试成果，请考虑引用本仓库。这能帮助我们追踪项目的影响力，并为您提供学术上的可追溯性。
+
+```bibtex
+@misc{lsyu0904_2025_gad_benchmark,
+  author       = {Your Name Here},
+  title        = {GAD-Reproducibility-Benchmark: A Reproducibility Benchmark for Graph Anomaly Detection},
+  year         = {2025},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{https://github.com/lsyu0904/GAD-Reproducibility-Benchmark}}
 }
