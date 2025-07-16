@@ -17,7 +17,7 @@
 | **ConsisGAD** | Consistency Training with Learnable Data Augmentation for GAD | ICLR 2024 | 利用一致性训练和可学习的数据增强来处理有限监督场景。 |
 | **ADA-GAD** | Anomaly-Denoised Autoencoders for Graph Anomaly Detection | AAAI 2024 | 设计一个两阶段框架，先在去噪的图上预训练，再在原图上检测。 |
 
-## 2. 环境配置 (重要！)
+## 2. 环境配置
 
 由于复现的各篇论文依赖的库版本存在冲突（例如需要不同版本的 PyTorch 或 DGL），**本项目不提供统一的运行环境**。每个模型都需要在各自独立的虚拟环境中进行安装和运行，以确保100%的可复现性。
 
