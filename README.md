@@ -17,22 +17,50 @@
 | **ConsisGAD** | Consistency Training with Learnable Data Augmentation for GAD | ICLR 2024 | 利用一致性训练和可学习的数据增强来处理有限监督场景。 |
 | **ADA-GAD** | Anomaly-Denoised Autoencoders for Graph Anomaly Detection | AAAI 2024 | 设计一个两阶段框架，先在去噪的图上预训练，再在原图上检测。 |
 
-## 2. 环境配置与安装
+## 2. 环境配置 (重要！)
 
-为了保证实验的可复现性，我们强烈建议使用 `conda` 创建并管理虚拟环境。
+由于复现的各篇论文依赖的库版本存在冲突（例如需要不同版本的 PyTorch 或 DGL），**本项目不提供统一的运行环境**。每个模型都需要在各自独立的虚拟环境中进行安装和运行，以确保100%的可复现性。
 
+每个模型的子目录内都包含一个独立的 `requirements.txt` 文件。请按照以下步骤为每个模型配置环境。
+
+### 配置 GGAD 环境
+*   **核心依赖**: `Python 3.7`, `PyTorch 1.11.0`, `PyG 2.1.0`
 ```bash
-# 1. 克隆本仓库
-git clone https://github.com/lsyu0904/GAD-Reproducibility-Benchmark.git
-cd GAD-Reproducibility-Benchmark
+# 1. 为 GGAD 创建独立的 conda 环境
+conda create -n ggad python=3.7 -y
+conda activate ggad
 
-# 2. 创建并激活 Conda 环境
-conda create -n gad_benchmark python=3.8
-conda activate gad_benchmark
-
-# 3. 安装所有依赖项
-# requirements.txt 文件整合了运行所有三个模型所需的依赖库
+# 2. 安装 GGAD 的依赖
+# (请确保你位于 GAD-Reproducibility-Benchmark 的根目录)
+cd GGAD/
 pip install -r requirements.txt
+cd ..
+```
+
+### 配置 ConsisGAD 环境
+*   **核心依赖**: `Python 3.7`, `PyTorch 1.13.1`, `DGL 1.1.0`
+```bash
+# 1. 为 ConsisGAD 创建独立的 conda 环境
+conda create -n consis_gad python=3.7 -y
+conda activate consis_gad
+
+# 2. 安装 ConsisGAD 的依赖
+cd ConsisGAD/
+pip install -r requirements.txt
+cd ..
+```
+
+### 配置 ADA-GAD 环境
+*   **核心依赖**: `Python 3.8`, `PyTorch 1.10.1`, `PyG 2.2.0`
+```bash
+# 1. 为 ADA-GAD 创建独立的 conda 环境 (注意: 建议使用 Python 3.8)
+conda create -n ada_gad python=3.8 -y
+conda activate ada_gad
+
+# 2. 安装 ADA-GAD 的依赖
+cd ADA-GAD/
+pip install -r requirements.txt
+cd ..
 ```
 
 ## 3. 数据集
@@ -138,7 +166,7 @@ python main.py --use_cfg --seeds 0 --dataset reddit
 
 ```bibtex
 @misc{lsyu0904_2025_gad_benchmark,
-  author       = {Your Name Here},
+  author       = {Siyu Liu},
   title        = {GAD-Reproducibility-Benchmark: A Reproducibility Benchmark for Graph Anomaly Detection},
   year         = {2025},
   publisher    = {GitHub},
