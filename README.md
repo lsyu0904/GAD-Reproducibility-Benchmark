@@ -40,7 +40,7 @@ pip install -r requirements.txt
 本项目在多个公开的图异常检测基准数据集上进行了实验，包括 **Amazon, Reddit, T-Finance, Weibo, Yelp, Elliptic, DGraph-Fin, Questions, Tolokers, T-Social** 等。
 请从以下链接下载数据集压缩包 `datasets.zip`：
 
-➡️ **[点击此处从谷歌云盘下载数据集 (datasets.zip)]([https://drive.google.com/your-share-link-here](https://drive.google.com/file/d/1ajjDyZHhegoG__yBYIsBNxmHu5vEo94U/view?usp=sharing))**
+➡️ **[点击此处从谷歌云盘下载数据集 (datasets.zip)](https://drive.google.com/file/d/1ajjDyZHhegoG__yBYIsBNxmHu5vEo94U/view?usp=sharing)**
 
 下载后，请将 `datasets.zip` 解压，并确保解压后的 `datasets` 文件夹位于项目的根目录下。
 
